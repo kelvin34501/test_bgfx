@@ -44,6 +44,7 @@ add_custom_target(build_bgfx_linux_debug COMMAND make linux-debug64
 include(CTest)
 enable_testing()
 
+cmake_policy(SET CMP0072 NEW)
 find_package(OpenGL)
 if(NOT OPENGL_FOUND)
     message(STATUS "opengl not found")
